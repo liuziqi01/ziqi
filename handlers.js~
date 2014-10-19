@@ -1,5 +1,5 @@
 exports.index = function(req, res) {
-	res.send("Welcome to CS 1501");
+	res.send("Welcome to Ziqi Liu's personal website ");
 }
 
 var watchf = function(req, res) {

@@ -1,5 +1,5 @@
 exports.index = function(req, res) {
-	res.send("Welcome to Ziqi Liu's personal website ");
+	res.render('ziqi.html');
 }
 
 var watchf = function(req, res) {
