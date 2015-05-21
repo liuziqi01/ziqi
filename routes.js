@@ -3,5 +3,5 @@ module.exports = function(app) {
 	app.get('/', handlers.index);
     app.get('/watch', handlers.watch);
 app.get('/play',handlers.play);
-app.get('/game',handler.game);
+app.get('/game',handlers.game);
 }
