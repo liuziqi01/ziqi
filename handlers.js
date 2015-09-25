@@ -15,9 +15,11 @@ exports.play = function(req,res)
 	
     res.render('play.html');
 }
+
 exports.game = function(req,res){
     console.log("handlersing");
     res.render('game.html');
 }
+
 exports.watch = watchf;
 
