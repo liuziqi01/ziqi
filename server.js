@@ -23,7 +23,11 @@ app.set('views', path.normalize(__dirname) + '/public/html');
 app.set('view engine', 'html');
 app.engine('html', require('ejs').renderFile);
 
-
+app.get('/weeby/magic', function(req, res) {
+  // Happy hacking :)
+	res.send(req);
+  res.send('hello, world')
+})
 
 
 var port = Number(process.env.PORT || 8000);
