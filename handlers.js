@@ -12,7 +12,7 @@ var watchf = function(req, res) {
 
 exports.weeby =  function(req, res) {
   // Happy hacking :)
-	res.send(req);
+	//res.send(req);
   res.send('hello, world')
 })
 
