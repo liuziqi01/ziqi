@@ -12,6 +12,7 @@ var watchf = function(req, res) {
 
 exports.weeby =  function(req, res) {
   // Happy hacking :)
+  /*
 var url = require('url');
 var urlValue = 'http://ziqi.herokuApp.com/test1/test2?query=value';
 
@@ -20,6 +21,8 @@ var parsedUrl = url.parse(urlValue, true, true);
 console.log('Search is : ',parsedUrl.search);
 
   res.send('hello, world');
+  */
+  console.log("Hello");
 }
 
 
