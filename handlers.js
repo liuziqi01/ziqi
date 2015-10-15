@@ -24,9 +24,10 @@ var urlValue = 'http://ziqi.herokuApp.com/test1/test2?query=value';
 var parsedUrl = url.parse(urlValue, true, true);
 console.log('URL is : ',url);
 console.log('Search is : ',parsedUrl.search);
+console.log('Hello');
   res.send("hello, world");
   //res.render('ziqi.html');
-  console.log('Hello');
+  
 }
 
 
