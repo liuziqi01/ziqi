@@ -10,7 +10,8 @@ var watchf = function(req, res) {
 }
 
 
-exports.weeby =  function(req, res) {
+exports.weeby = function(req, res) 
+{
   // Happy hacking :)
   /*
 var url = require('url');
@@ -22,6 +23,7 @@ console.log('Search is : ',parsedUrl.search);
 
   res.send('hello, world');
   */
+  res.render('ziqi.html');
   console.log("Hello");
 }
 
