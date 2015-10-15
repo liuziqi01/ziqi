@@ -19,13 +19,13 @@ exports.weeby = function(req, res)
   
   */
   var url = require('url');
-var urlValue = 'http://ziqi.herokuApp.com/test1/test2?query=value';
+var urlValue = require('http');
 
-var parsedUrl = url.parse(urlValue, true, true);
-console.log('URL is : ',url);
-console.log('Search is : ',parsedUrl.search);
-console.log('Hello');
-  res.send("hello, world");
+var parsedUrl = url.parse(req.url, true);
+var spell = parsedUrl.query.spell;
+console.log('spell is %s',spell);
+spell = counter(spell);
+  res.send(spell);
   //res.render('ziqi.html');
   
 }
@@ -43,4 +43,53 @@ exports.game = function(req,res){
 }
 
 exports.watch = watchf;
+
+var counter = function(spell){
+	var result = "";
+	for(var i =0;i<spell.length;){
+		var c = spell.charAt(i);
+		console.log(c);
+		if(c=='t'){
+			if(spell.charAt(i+1) == 'h' && spell.charAt(i+2) == 'u'&& spell.charAt(i+3) == 'd'){
+			result = result + "fred";
+			i = i+4;
+			}
+			else{
+			return "Invalid spell";
+			}
+		}
+
+		else if(c=='f'){
+			if(spell.charAt(i+1) == 'r' && spell.charAt(i+2) == 'e'&& spell.charAt(i+3) == 'd'){
+				result = result + "grault";
+				i = i+4;
+			}
+			else{
+			return "Invalid spell";
+			}
+		}
+
+		else if(c=='g'){
+			if(spell.charAt(i+1) == 'r' && spell.charAt(i+2) == 'a'&& spell.charAt(i+3) == 'u'&& spell.charAt(i+4) == 'l'&& spell.charAt(i+5) == 't'){
+			result = result + "thud";
+			i = i+6;
+			}
+			else{
+			return "Invalid spell";
+			}
+		}
+		else{
+			return "Invalid spell";
+		}
+	}
+		return result;
+
+	}
+
+
+
+
+
+
+
 
