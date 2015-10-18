@@ -21,3 +21,7 @@
         left: 25px;
         border-radius: 50px;
         }
+
+#key div, #sytle div{
+          margin-left:0px;
+    } 
