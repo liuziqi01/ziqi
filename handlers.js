@@ -12,12 +12,7 @@ var watchf = function(req, res) {
 
 exports.weeby = function(req, res) 
 {
-  // Happy hacking :)
-  /*
 
-
-  
-  */
   var url = require('url');
 var urlValue = require('http');
 
@@ -26,7 +21,13 @@ var spell = parsedUrl.query.spell;
 console.log('spell is %s',spell);
 spell = counter(spell);
   res.send(spell);
-  //res.render('ziqi.html');
+  
+}
+
+exports.key = function(req, res) 
+{
+
+  res.render('key.html');
   
 }
 
