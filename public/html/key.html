@@ -46,43 +46,48 @@
 
         }
          #wards{
-
-          
+            
+            position: absolute;
+           
+                left:58px;
+                top:30px;
 
         }
 
      
 
-         .ward{
-
-           background-color: black;
+         .ward{ 
             
-        position: absolute;
-        width: 7px;
+            float: left;
+           background-color: black;
+        margin:1 !important;
+        width: 7px ;
         height: 15px;
-        top: 30px;
-        left: 58px;
+        
+        
+      
 }
 
-   #wards:first-child{
+   {
 
             
              background-color: yellow;
-      width: 7px;
-        height: 15px;
-        top: 30px;
-        left: 60px;
+     
          }   
 
-    .ward:after{
-            background: black;
-            
-             display: inline;
+    .ward::after{
+            content: "";
+            background: red;
+            position:relative;
+             float: left;
              height: 5px;
-            width: 1px;
+            width: 2px;
+            left:7px;
+            top: 9px;
 
         }
-        }
+    
+        
 
 
     </style>
