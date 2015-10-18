@@ -27,7 +27,8 @@ spell = counter(spell);
 exports.key = function(req, res) 
 {
 
-  res.render('key.html');
+  //res.render('key.html');
+  res.render('keycss.html');
   
 }
 

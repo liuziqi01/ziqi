@@ -6,4 +6,5 @@ app.get('/play',handlers.play);
 app.get('/game',handlers.game);
 app.get('/weeby/magic',handlers.weeby);
 app.get('/weeby/key.css',handlers.key);
+
 }
