@@ -7,10 +7,8 @@
         <div class = "ward"></div>
      </div>
 </div>
-
-
 <div id = "styles">
-     <style>
+    <style>
     html, body { width: 100px; height: 100px; margin: 0; font: 4px sans-serif; line-height: 4px; word-wrap: break-word } #key div, #styles div { margin-left: 10px } 
     </style>
 
@@ -48,62 +46,93 @@
 
         }
          #wards{
-            text-indent: -999999px;
-            position: absolute;
+            text-indent: -99999999999px;
+
+            overflow: hidden;
+            position: relative;
            
-                left:57px;
-                top:25px;
+                left:55px;
+                bottom:-30px;
+                
 
         }
-        #wards> div:first-child{
-            background-color: yellow;
-            height: 15px;
-        }
+    
+    
 
-        #wards> div:last-child{
-            background-color: red;
-            height: 10px;
-        }
-
-     
-
-         .ward{ 
-             text-indent: -999999px;
-            float: left;
-           background-color: purple;
-        margin:1 !important;
-        width: 7px ;
-        height: 7px;
-        
-        
-      
-}
-
-
-
-    .ward::after{
+           .ward::after{
             content: "";
              text-indent: -999999px;
-            background: purple;
+             overflow: visible;
+            background: yellow;
             position:relative;
+            float: bottom;
              float: left;
              height: 6px;
             width: 2px;
             left:7px;
-            top: 9px;
+            bottom:10%;
+            vertical-align: bottom;
+
 
         }
+         .ward{ 
+             text-indent: -999999px;
+             
+            float: left;
+           background-color: purple;
+        margin:1 !important;
+        width: 7px ;
+        height: 15px;
+
+        
+        
+      
+}
+ #wards>div:nth-child(2) {
+            background: #ff0000;
+            position: absolute;
+            left:9px;
+            height: 7px;
+            bottom:0;
+        }   
+         #wards>div:nth-child(2)::after {
+          
+            position: absolute;
+         
+            bottom:0;
+        }  
+        #wards> div:last-child{
+             background: #ff0000;
+            position: absolute;
+            left:18px;
+            height: 10px;
+            bottom:0;
+        }
+           #wards>div:last-child::after {
+          
+            position: absolute;
+         
+            bottom:0;
+        }  
+
+ #wards>div:first-child::after {
+          
+            position: absolute;
+            left: 8;
+            bottom:0;
+        }  
+
+ 
     
         
 
 
     </style>
     <style>
-    #key #stem {
-       overflow: visible;
+    #key #stem { overflow: visible;
         width: 0;
         background: purple !important;
-        white-space: nowrap;
+        white-space: nowrap
     }
     </style>
      </div>
