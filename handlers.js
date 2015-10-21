@@ -34,7 +34,7 @@ exports.key = function(req, res)
 
 exports.flappy = function(req, res) 
 {
-	if(req.method == POST){
+	if(req.method == 'POST'){
 		res.send("Hello POST");
 	
       
