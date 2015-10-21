@@ -32,6 +32,27 @@ exports.key = function(req, res)
   
 }
 
+exports.flappy = function(req, res) 
+{
+	if(req.method == POST){
+		res.send("Hello POST");
+	
+      
+  console.log("Request handler random was called.");
+  response.writeHead(200, {"Content-Type": "application/json"});
+  var time = ["144545748669"];
+  var nextTime =  "144545748699" ;
+  var json = JSON.stringify({ 
+    queue: time, 
+    next : nextTime
+  });
+
+  response.end(json);
+}
+  //res.render('keycss.html');
+  
+}
+
 
 exports.play = function(req,res)
 {
