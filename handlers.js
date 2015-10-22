@@ -40,7 +40,7 @@ exports.flappy = function(req, res)
       console.log(req.body.game);
   res.writeHead(200, {"Content-Type": "application/json"});
   
-  var time = ["144545748669"，"144545748679"];
+  var time = ["144545748669", "144545748679"];
   var nextTime =  "144545748699" ;
   var json = JSON.stringify({ 
     queue: time, 
