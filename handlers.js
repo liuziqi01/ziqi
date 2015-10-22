@@ -42,11 +42,11 @@ exports.flappy = function(req, res)
   var time =[2];
   var nextFly= fly(req);
   if(nextFly != -1){
-  	time.push(req.body.t+nextFly);
+  	time.push(parseInt(req.body.t)+nextFly);
   }
   
-  var nextTime =  req.body.t+1;
-  console.log(num);
+  var nextTime =  parseInt(req.body.t)+1;
+  //console.log(num);
   var json = JSON.stringify({ 
     queue: time, 
     next : nextTime
@@ -82,7 +82,7 @@ var fly = function (req){
 	}
 	else if(req.body.me.y<200){
 		
-		console.log(startTime);
+		//console.log(startTime);
 		return 1;
 	}
 	else return -1;
