@@ -44,7 +44,7 @@ exports.flappy = function(req, res)
   if(nextFly != -1){
   	time.push(nextFly);
   }
-  var nextTime =  nextFly+4 ;
+  var nextTime =  nextFly+1 ;
   var json = JSON.stringify({ 
     queue: time, 
     next : nextTime
@@ -73,11 +73,15 @@ exports.watch = watchf;
 
 
 var fly = function (req){
-	if(req.me.y< 100){
-		return req.startTime+t;
+
+	if(req.body.me.y< "150"){
+		console.log(req.body.me.y);
+		return req.body.startTime+req.body.t;
 	}
-	else if(req.me.y<150){
-		return req.startTime + t+5;
+	else if(req.body.me.y<"200"){
+		var num = new Number(req.body.startTime);
+		console.log(num+1);
+		return num+1;
 	}
 	else return -1;
 }
