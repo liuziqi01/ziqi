@@ -37,13 +37,14 @@ exports.flappy = function(req, res)
 	
 	//	res.send("Hello POST");
 	
-      console.log(req.body.game);
+     // console.log(req.body.game);
   res.writeHead(200, {"Content-Type": "application/json"});
   var time =[];
   var nextFly= fly(req);
   if(nextFly != -1){
   	time.push(nextFly);
   }
+  var num = new Number(nextFly);
   var nextTime =  nextFly+1 ;
   var json = JSON.stringify({ 
     queue: time, 
@@ -73,15 +74,15 @@ exports.watch = watchf;
 
 
 var fly = function (req){
-
+var startTime = new Number(req.body.startTime);
 	if(req.body.me.y< "150"){
-		console.log(req.body.me.y);
-		return req.body.startTime+req.body.t;
+		//console.log(req.body.me.y);
+		return startTime+req.body.t;
 	}
 	else if(req.body.me.y<"200"){
-		var num = new Number(req.body.startTime);
-		console.log(num+1);
-		return num+1;
+		
+		
+		return startTime+1;
 	}
 	else return -1;
 }
