@@ -2,6 +2,11 @@ var express = require("express")
 , path = require('path');
 
 var app = express();
+var bodyParser = require('body-parser');
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended:true}));
+
+
 
 require('./routes')(app);
 
@@ -12,10 +17,14 @@ app.use(express.static(path.normalize(__dirname) + '/public'))
 // Tell express to use its built in error handler
 app.use(express.errorHandler());
 
+
 app.configure(function() {
 	app.use(express.logger('dev'));
 	app.use(express.bodyParser());
 })
+
+
+
 
 // These 3 lines tell express that we are going to be rendering html files
 // held in the public directory which should be in the same directory as this file

@@ -34,5 +34,8 @@
     "shasum": "da29609fc445c76f18d665a4dd218fb389ed8383"
   },
   "_from": "ejs@",
-  "_resolved": "https://registry.npmjs.org/ejs/-/ejs-0.8.5.tgz"
+  "_resolved": "https://registry.npmjs.org/ejs/-/ejs-0.8.5.tgz",
+  "dependencies": {
+    "body-parser": "^1.14.1"
+  }
 }
