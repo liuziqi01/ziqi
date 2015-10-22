@@ -47,7 +47,7 @@ exports.flappy = function(req, res)
     next : nextTime
   });
 
-  response.send(json);
+  res.send(json);
 
   res.send("not hello");
   
