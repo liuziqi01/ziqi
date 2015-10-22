@@ -34,8 +34,8 @@ exports.key = function(req, res)
 
 exports.flappy = function(req, res) 
 {
-	if(req.method == 'POST'){
-		res.send("Hello POST");
+	
+	//	res.send("Hello POST");
 	
       
   console.log("Request handler random was called.");
@@ -47,9 +47,7 @@ exports.flappy = function(req, res)
     next : nextTime
   });
 
-  response.end(json);
-}
-else
+  response.send(json);
 
   res.send("not hello");
   
