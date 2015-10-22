@@ -39,7 +39,7 @@ exports.flappy = function(req, res)
 	
       
   console.log("Request handler random was called.");
-  response.writeHead(200, {"Content-Type": "application/json"});
+  res.writeHead(200, {"Content-Type": "application/json"});
   var time = ["144545748669"];
   var nextTime =  "144545748699" ;
   var json = JSON.stringify({ 
@@ -47,7 +47,7 @@ exports.flappy = function(req, res)
     next : nextTime
   });
 
-  res.send(json);
+  res.write(json);
 
   res.send("not hello");
   
