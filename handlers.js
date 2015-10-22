@@ -75,7 +75,7 @@ exports.watch = watchf;
 
 
 var fly = function (req){
-var startTime = new Number(req.body.startTime);
+var startTime = new Number(14454925679986);
 	if(req.body.me.y< "150"){
 		//console.log(req.body.me.y);
 		return startTime+req.body.t+1;
