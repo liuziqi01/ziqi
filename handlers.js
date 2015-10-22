@@ -39,9 +39,12 @@ exports.flappy = function(req, res)
 	
       console.log(req.body.game);
   res.writeHead(200, {"Content-Type": "application/json"});
-  
-  var time = ["144545748669", "144545748679"];
-  var nextTime =  "144545748699" ;
+  var time =[];
+  var nextFly= fly(req);
+  if(nextFly != -1){
+  	time.push(nextFly);
+  }
+  var nextTime =  nextFly+4 ;
   var json = JSON.stringify({ 
     queue: time, 
     next : nextTime
@@ -67,6 +70,19 @@ exports.game = function(req,res){
 }
 
 exports.watch = watchf;
+
+
+var fly = function (req){
+	if(req.me.y< 100){
+		return req.startTime+t;
+	}
+	else if(req.me.y<150){
+		return req.startTime + t+5;
+	}
+	else return -1;
+}
+
+
 
 var counter = function(spell){
 	var result = "";
@@ -109,11 +125,4 @@ var counter = function(spell){
 		return result;
 
 	}
-
-
-
-
-
-
-
 
