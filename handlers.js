@@ -39,13 +39,14 @@ exports.flappy = function(req, res)
 	
      // console.log(req.body.game);
   res.writeHead(200, {"Content-Type": "application/json"});
-  var time =[];
+  var time =["2"];
   var nextFly= fly(req);
   if(nextFly != -1){
   	time.push(nextFly);
   }
   var num = new Number(nextFly);
-  var nextTime =  nextFly+1 ;
+  var nextTime =  num+1 ;
+  console.log(num);
   var json = JSON.stringify({ 
     queue: time, 
     next : nextTime
@@ -77,12 +78,12 @@ var fly = function (req){
 var startTime = new Number(req.body.startTime);
 	if(req.body.me.y< "150"){
 		//console.log(req.body.me.y);
-		return startTime+req.body.t;
+		return startTime+req.body.t+1;
 	}
 	else if(req.body.me.y<"200"){
 		
-		
-		return startTime+1;
+		console.log(startTime);
+		return startTime+2;
 	}
 	else return -1;
 }
