@@ -28,16 +28,19 @@ exports.key = function(req, res)
 {
 
   res.render('key.html');
-  //res.render('keycss.html');
+  
+}
+
+exports.bitcoin_project = function(req, res) 
+{
+
+  res.render('bitcoin_project.html');
   
 }
 
 exports.flappy = function(req, res) 
 {
 	
-	//	res.send("Hello POST");
-	
-     // console.log(req.body.game);
   res.writeHead(200, {"Content-Type": "application/json"});
   var time =[2];
   var nextFly= fly(req);
