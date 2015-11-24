@@ -33,7 +33,7 @@ exports.key = function(req, res)
 
 exports.bitcoin_project = function(req, res) 
 {
-
+	console.log("bitcoin");
   res.render('bitcoin_project.html');
   
 }

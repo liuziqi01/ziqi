@@ -6,7 +6,7 @@ app.get('/play',handlers.play);
 app.get('/game',handlers.game);
 app.get('/weeby/magic',handlers.weeby);
 app.get('/weeby/key.css',handlers.key);
-app.post('/bitcoin_project',handlers.bitcoin_project);
+app.get('/bitcoin_project',handlers.bitcoin_project);
 
 
 }
