@@ -4,8 +4,7 @@
  * malacious try to change div introduction to "This part is hacked by 3rd party script"
  *
  */
-<script>
+
 
  document.getElementById('introduction').innerHTML= "This is hacked";
  document.getElementById('ad').innerHTML = "<img src='/img/fake_google_ad.png'/>";
- </script>
