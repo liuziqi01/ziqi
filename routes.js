@@ -7,7 +7,7 @@ app.get('/game',handlers.game);
 app.get('/weeby/magic',handlers.weeby);
 app.get('/weeby/key.css',handlers.key);
 app.get('/bitcoin_project',handlers.bitcoin_project);
-app.get('/getEvilCode',handlers.getEvilCode);
+app.get('/getEvilCode.js',handlers.getEvilCode);
 
 
 }
