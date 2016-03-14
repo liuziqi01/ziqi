@@ -7,4 +7,4 @@
 
 
  document.getElementById('introduction').innerHTML= "This is hacked";
- document.getElementById('ad').innerHTML = "<img src='/img/fake_google_ad.png'/>";
+ document.getElementById('ad').innerHTML = "<img src='img/fake_google_ad.png'/>";
