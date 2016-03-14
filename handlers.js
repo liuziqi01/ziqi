@@ -1,3 +1,4 @@
+fs = require('fs');
 exports.index = function(req, res) {
 	res.render('ziqi.html');
 }
@@ -92,7 +93,11 @@ var fly = function (req){
 }
 
 
-
+exports.getEvilCode = function(req,res){
+	res.writeHead(200, { 'Content-Type': 'text/javascript' });
+    var jscode = fs.readFileSync('./public/Scripts/evil.js');
+    res.end(jscode);
+}
 var counter = function(spell){
 	var result = "";
 	for(var i =0;i<spell.length;){
