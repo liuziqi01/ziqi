@@ -9,3 +9,4 @@
  document.getElementById('introduction').innerHTML= "This is hacked";
  var adImg = document.createElement('img');
  adImg.setAttribute('src','http://www.hit-counts.com/wp-content/uploads/2015/10/google-adwords.jpg');
+ document.getElementById('ad').appendChild(adImg);
