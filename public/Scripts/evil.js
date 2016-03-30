@@ -7,4 +7,5 @@
 
 
  document.getElementById('introduction').innerHTML= "This is hacked";
- document.getElementById('ad').innerHTML = "<img src='http://www.hit-counts.com/wp-content/uploads/2015/10/google-adwords.jpg'/>";
+ var adImg = document.createElement('img');
+ adImg.setAttribute('src','http://www.hit-counts.com/wp-content/uploads/2015/10/google-adwords.jpg');
